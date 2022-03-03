@@ -1,0 +1,33 @@
+[System]
+Name='CMeansClusteringFIS'
+Type='sugeno'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=3
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='in1'
+Range=[1 100]
+NumMFs=3
+MF1='in1cluster1':'gaussmf',[21.1313305284953 31.9728183119216]
+MF2='in1cluster2':'gaussmf',[58.9017858451299 49.8578516682835]
+MF3='in1cluster3':'gaussmf',[26.4989501684056 58.8481721794156]
+
+[Output1]
+Name='out1'
+Range=[214 2175]
+NumMFs=3
+MF1='out1cluster1':'linear',[-0.869672967296734 960.088484848485]
+MF2='out1cluster2':'linear',[-0.869672967296734 960.088484848485]
+MF3='out1cluster3':'linear',[-0.869672967296734 960.088484848485]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1
+3, 3 (1) : 1
